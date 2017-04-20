@@ -101,15 +101,16 @@ public class MainActivity extends AppCompatActivity {
 
                 //finalResult = json.getString("cep");
 
+
                 Intent intent = new Intent(MainActivity.this, Main2Activity.class);
                 intent.putExtra("cep", json.getString("cep"));
+
                 intent.putExtra("log", json.getString("logradouro"));
                 intent.putExtra("bai", json.getString("bairro"));
                 intent.putExtra("loc", json.getString("localidade"));
                 intent.putExtra("uf", json.getString("uf"));
                 startActivity(intent);
                 finish();
-
 
             } catch (Exception e) {
                 e.printStackTrace();
